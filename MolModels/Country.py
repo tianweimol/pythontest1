@@ -1,6 +1,7 @@
 from django.db import models
 
 class Country(models.Model):
+    # pass
     # field
     CreateDate=models.DateTimeField('创建时间',name='CreateDate',auto_now_add=True)
     Code=models.CharField('国家编码',max_length=2,blank=False)
@@ -12,6 +13,6 @@ class Country(models.Model):
 
     class Meta:
         db_table = 'tb_Country'
-        # managed = True
-        # verbose_name = 'ModelName'
-        # verbose_name_plural = 'ModelNames'
+        managed = True
+        verbose_name = 'ModelName'
+        verbose_name_plural = 'ModelNames'

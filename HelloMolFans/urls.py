@@ -15,11 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import *
 import Controllers
 from Controllers import Hello
+from Controllers import DbOp
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('admin/', admin.site.urls),
-    path('hello/',Hello.hello)
+    path('hello/',Hello.hello),
+    # url(r'dbshow',Controllers.DbOp.ShowCountry),
+    # url(r'dbup',Controllers.DbOp.UpdateCountry),
+    url(r'',Controllers.DbOp.ShowCountry),
+    
 ]
 
